@@ -1,0 +1,2 @@
+g++ -o Task_8 -fsanitize=undefined Task_8.cpp
+./Task_8

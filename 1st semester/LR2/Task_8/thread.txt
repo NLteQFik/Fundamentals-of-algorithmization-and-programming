@@ -1,0 +1,2 @@
+clang++ -o Task_8 -fsanitize=thread Task_8.cpp
+./Task_8
