@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AlgorithmEditor</class>
+ <widget class="QWidget" name="AlgorithmEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>250</width>
+    <height>100</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QComboBox" name="solversComboBox">
+     <item>
+      <property name="text">
+       <string>Shortest path</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Min spanning forest</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Max matching in bipartite</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Weak components</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Strong components</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Chromatic number</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Eulerian check</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Max flow</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Min cost flow</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Isomorphism</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="executeButton">
+     <property name="text">
+      <string>Execute Algorithm</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

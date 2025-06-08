@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+        background-color: #fdfdfd;
+        color: #202020;
+        font-family: Segoe UI, sans-serif;
+        font-size: 14px;
+    }
+
+    QLabel {
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #202020;
+}
+
+    QLabel:hover {
+        border: 1px dashed #999;
+        background-color: #f0f8ff;
+    }
+
+    QSpinBox {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 2px 6px 2px 6px;
+        background-color: #ffffff;
+        selection-background-color: #cceeff;
+    }
+
+    QSpinBox::up-arrow {
+        content: &quot;▲&quot;;
+        color: #555;
+        font-size: 10px;
+    }
+
+    QSpinBox::down-arrow {
+        content: &quot;▼&quot;;
+        color: #555;
+        font-size: 10px;
+    }
+
+    QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+        background-color: #e6f7ff;
+    }
+
+    QPushButton {
+        background-color: #e0f0ff;
+        border: 1px solid #99ccff;
+        border-radius: 6px;
+        padding: 4px 10px;
+    }
+
+    QPushButton:hover {
+        background-color: #cce4ff;
+    }
+
+    QPushButton:pressed {
+        background-color: #b3d8ff;
+    }
+
+    QCheckBox {
+        spacing: 6px;
+    }
+
+    QCheckBox:hover {
+        color: #0055aa;
+    }</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_6">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_4" rowstretch="1,1,1,2,6" columnstretch="1,4">
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item row="2" column="0">
+       <widget class="QComboBox" name="modeComboBox">
+        <property name="currentText">
+         <string>Move items</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Move items</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Add vertex</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Add edge</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Delete items</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Execute algorithm</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="5">
+       <widget class="QStackedWidget" name="stackedSceneWidget"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="curPageLabel">
+           <property name="text">
+            <string>Current page number:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="curPageSpinBox">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="selPageLabel">
+           <property name="text">
+            <string>Selected page number:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="selPageSpinBox">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="totalPageLabel">
+           <property name="text">
+            <string>Total number of pages:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="totalPageSpinBox">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="wrapping">
+            <bool>false</bool>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
+           <property name="accelerated">
+            <bool>false</bool>
+           </property>
+           <property name="keyboardTracking">
+            <bool>true</bool>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string>Inforamation</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="1" column="0">
+          <widget class="QLabel" name="infoLable">
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QSpinBox" name="flowReqiredSpinBox">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="2" column="1">
+          <widget class="QPushButton" name="savePageButton">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset theme="document-save">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="openPageButton">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset theme="document-open">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="rightPageButton">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset theme="go-next">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="closePageButton">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset theme="edit-clear">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="leftPageButton">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset theme="go-previous">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="addPageButton">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset theme="list-add">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QStackedWidget" name="stackedEditorWidget">
+        <widget class="QWidget" name="emptyPage">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1600</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
